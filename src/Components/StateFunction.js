@@ -35,6 +35,8 @@ function Counter(){
     })
   }
 
+  const gambar = "https://2.bp.blogspot.com/-UwFOGr5oq4Q/VlvY0hrCtOI/AAAAAAAAADw/p4nFXnK-NpA/s1600/wp1.png";
+
   return(
     <div className="App">
       <div className="App-header">
@@ -47,6 +49,7 @@ function Counter(){
             <p><small>Email:</small> {user.email}</p>
             <p><small>Password:</small> {user.password}</p>
           </div>
+          <img width="150" src={gambar} />
       </div>
     </div>
   )
@@ -54,7 +57,9 @@ function Counter(){
 
 function StateFunction(){
     return(
-      <Counter number="77" />
+      <>
+        <Counter number="77" />
+      </>
     )
 }
 
