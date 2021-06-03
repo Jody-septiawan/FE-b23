@@ -1,9 +1,11 @@
-import '../App.css';
+// import '../App.css';
 import { useState } from 'react';
 
-function Counter(){
+function Counter({number}){
 
-  const [counter, setCounter] = useState(5);
+  number = parseInt(number)
+
+  const [counter, setCounter] = useState(number);
   const [company, setCompany] = useState("Dumbways.id");
   const [user, setUser] = useState(
     {
@@ -49,7 +51,7 @@ function Counter(){
             <p><small>Email:</small> {user.email}</p>
             <p><small>Password:</small> {user.password}</p>
           </div>
-          <img width="150" src={gambar} />
+          <img width="150" src={gambar} alt="gambar" />
       </div>
     </div>
   )
@@ -58,7 +60,7 @@ function Counter(){
 function StateFunction(){
     return(
       <>
-        <Counter number="77" />
+        <Counter number="89" />
       </>
     )
 }

@@ -1,11 +1,12 @@
-import '../App.css';
+// import '../App.css';
+import style from '../css/style'
 
 function Login(){
 
   return(
     <div className="App">
-      <div className="App-header">
-          <h2>Please Login</h2>
+      <div className="App-header" style={style.background}>
+          <h2 style={style.textHeading}>Please Login</h2>
       </div>
     </div>
   )
