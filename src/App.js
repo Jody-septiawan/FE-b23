@@ -1,33 +1,48 @@
-import './css/Global.css';
-import {useState} from 'react'
+// import './Css/Global.css';
+import 'bootstrap/dist/css/bootstrap.min.css'
 
-// import Props from './Components/Props';
-// import StateClass from './Components/StateClass';
-// import StateFunction from './Components/StateFunction';
-import Login from './Components/Login';
-import List from './Components/List';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
+
+import NavigasiBar from './Components/Navbar'
+import Home from './Components/Home'
+import About from './Components/About'
+import Product from './Components/Product';
+import Profile from './Components/Profile'
+
+import PrivateRoute from './Components/PrivateRoute'
 
 function App() {
 
-  const [isLogin] = useState(true)
 
   return(
-    <>
-      { isLogin ?  <List /> : <Login /> }
-    </>
-  )
+    <Router>
 
-  // if(isLogin){
-  //   return (
-  //     <>
-  //       {/* <Props /> */}
-  //       {/* <StateClass /> */}
-  //       <StateFunction />
-  //     </>
-  //   );
-  // }else{
-  //   return <Login />
-  // }
+      <NavigasiBar />
+
+      <Switch>
+
+        <Route exact path="/">
+          <Home />
+        </Route>
+        
+        <Route path="/about">
+
+          <About />
+
+        </Route>
+
+        <Route path="/product" component={Product} />
+
+        <PrivateRoute path="/profile" component={Profile} />
+
+      </Switch>
+
+    </Router>
+  )
 }
 
 export default App;
