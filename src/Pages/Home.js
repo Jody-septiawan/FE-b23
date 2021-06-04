@@ -1,6 +1,12 @@
+import { useContext } from 'react'
 import { Card, Container } from 'react-bootstrap'
 
+import { UserContext } from '../context/userContext'
+
 function Home() {
+
+    const [state, dispatch] = useContext(UserContext)
+
     return (
         <Container className="my-5">
             <Card className="shadow">

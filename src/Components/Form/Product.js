@@ -37,12 +37,12 @@ function FormProduct({setDataAddProduct}) {
 
             <Form.Group className="mb-3" controlId="formBasicName">
                 <Form.Label>Product Name</Form.Label>
-                <Form.Control onChange={handleOnChange} name="name" value={name} type="text" placeholder="Enter name" />
+                <Form.Control required onChange={handleOnChange} name="name" value={name} type="text" placeholder="Enter name" />
             </Form.Group>
 
             <Form.Group className="mb-3" controlId="formBasicDesc">
                 <Form.Label>Description</Form.Label>
-                <Form.Control onChange={handleOnChange} name="desc" value={desc} type="text" placeholder="Description" />
+                <Form.Control required onChange={handleOnChange} name="desc" value={desc} type="text" placeholder="Description" />
             </Form.Group>
 
             <Button variant="primary" type="submit">
